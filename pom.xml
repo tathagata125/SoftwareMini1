@@ -69,7 +69,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.com.eazybytes.ScientificCalculator</mainClass>
+                            <mainClass>com.eazybytes.ScientificCalculator</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

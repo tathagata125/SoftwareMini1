@@ -34,8 +34,8 @@
 
     - name: Run Docker container
       docker_container:
-        name: calculator1
-        image: tathagata125/calculator1
+        name: calculator2
+        image: tathagata125/calculator2
         state: started
         tty: true
         interactive: true
