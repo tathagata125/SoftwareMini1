@@ -14,7 +14,7 @@ FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 # Ensure the script has execute permissions
-COPY --from=0 /app/target/ScientificCalculator-1.0-SNAPSHOT.jar /app/
+COPY --from=build /app/target/ScientificCalculator-1.0-SNAPSHOT.jar .
 
 # Set the default command to execute ScientificCalculator.java
 ENTRYPOINT ["java","-jar", "ScientificCalculator-1.0-SNAPSHOT.jar"]
