@@ -2,7 +2,7 @@ FROM maven:3.8.6-eclipse-temurin-17 AS build
 
 # Set the working directory
 WORKDIR /app
-RUN apt-get update && apt-get install -y maven
+
 COPY pom.xml .
 RUN mvn dependency:go-offline
 # Copy the source code
