@@ -2,6 +2,7 @@ FROM openjdk:11-jdk
 
 # Set the working directory
 WORKDIR /app
+RUN apt-get update && apt-get install -y maven
 COPY pom.xml .
 RUN mvn dependency:go-offline
 # Copy the source code
