@@ -19,7 +19,7 @@
 
     - name: Pull Docker Image
       docker_image:
-        name: "tathagata125/calculator1"
+        name: "tathagata125/calculator2"
         source: pull
       register: docker_pull_result
 
@@ -34,7 +34,7 @@
 
     - name: Run Docker container
       docker_container:
-        name: calculator
+        name: calculator1
         image: tathagata125/calculator1
         state: started
         tty: true
