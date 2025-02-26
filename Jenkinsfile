@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-		DOCKER_IMAGE_NAME = 'calculator'
-        DOCKER_HUB_REPO = 'tathagata125/calculator'
+		DOCKER_IMAGE_NAME = 'calculator1'
+        DOCKER_HUB_REPO = 'tathagata125/calculator1'
         GITHUB_REPO_URL = 'https://github.com/tathagata125/SoftwareMini1.git'
 
     }
@@ -37,8 +37,8 @@ pipeline {
 				script{
 					withCredentials([string(credentialsId: 'DockerHubCred', variable: 'DOCKER_HUB_PASSWORD')]) {
 						sh "echo '${DOCKER_HUB_PASSWORD}' | docker login -u 'tathagata125' --password-stdin"
-                    sh 'docker tag calculator tathagata125/calculator:latest'
-                    sh 'docker push tathagata125/calculator:latest'
+                    sh 'docker tag calculator tathagata125/calculator1:latest'
+                    sh 'docker push tathagata125/calculator1:latest'
                     }
                  }
             }

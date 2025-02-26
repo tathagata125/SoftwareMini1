@@ -17,4 +17,4 @@ WORKDIR /app
 COPY --from=build /app/target/MT2024161-1.0-SNAPSHOT.jar .
 
 # Set the default command to execute ScientificCalculator.java
-ENTRYPOINT ["java","-jar", "ScientificCalculator-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar", "MT2024161-1.0-SNAPSHOT.jar"]
