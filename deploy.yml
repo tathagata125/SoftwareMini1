@@ -19,7 +19,7 @@
 
     - name: Pull Docker Image
       docker_image:
-        name: "tathagata125/calculator"
+        name: "tathagata125/calculator1"
         source: pull
       register: docker_pull_result
 
@@ -35,9 +35,9 @@
     - name: Run Docker container
       docker_container:
         name: calculator
-        image: tathagata125/calculator
+        image: tathagata125/calculator1
         state: started
         tty: true
         interactive: true
         detach: true
-        command: java ScientificCalculator
+        command: java -jar MT2024161-1.0-SNAPSHOT.jar
