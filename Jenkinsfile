@@ -41,8 +41,8 @@ pipeline {
 				script{
 					withCredentials([string(credentialsId: 'DockerHubCred', variable: 'DOCKER_HUB_PASSWORD')]) {
 						sh "echo '${DOCKER_HUB_PASSWORD}' | docker login -u 'tathagata125' --password-stdin"
-                    sh 'docker tag calculator2 tathagata125/calculator2:latest'
-                    sh 'docker push tathagata125/calculator2:latest'
+                    	sh 'docker tag calculator2 tathagata125/calculator2:latest'
+                    	sh 'docker push tathagata125/calculator2:latest'
                     }
                  }
             }
@@ -51,7 +51,7 @@ pipeline {
 			steps {
 				script {
 					withEnv(["ANSIBLE_HOST_KEY_CHECKING=False"]) {
-						// Write the inventory file dynamically
+
 
                         // Run the Ansible playbook
                         ansiblePlaybook(
