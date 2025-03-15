@@ -23,7 +23,7 @@ pipeline {
         }
 		stage('Build and Test with Maven') {
 			steps {
-				sh 'mvn clean package'
+				sh 'mvn clean test'
             }
         }
         stage('Build Docker Image') {

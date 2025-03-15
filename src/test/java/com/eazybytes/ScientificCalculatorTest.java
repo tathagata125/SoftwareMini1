@@ -1,19 +1,13 @@
 package com.eazybytes;
 
-
-
-
-import org.junit.Test;
-
-
-
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ScientificCalculatorTest {
 
     @Test
     public void testSquareRoot() {
-        assertEquals(4.0, Math.sqrt(15), 0.0001);
+        assertEquals(4.0, Math.sqrt(16), 0.0001);
         assertEquals(5.0, Math.sqrt(25), 0.0001);
     }
 
