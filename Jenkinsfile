@@ -1,9 +1,7 @@
 pipeline {
 	agent any
 
-    triggers {
-		githubPush()
-    }
+
 
     environment {
 		DOCKER_IMAGE_NAME = 'calculator2'
