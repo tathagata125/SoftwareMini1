@@ -3,7 +3,7 @@ pipeline {
 
 
     triggers {
-        githubPush() // Triggers on GitHub push events
+        githubPush() // Triggers on GitHub push event
     }
 
     environment {
