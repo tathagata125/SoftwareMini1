@@ -64,14 +64,10 @@ pipeline {
         }
         }
        post {
-           always {
-               cleanWs(patterns: [
-                   [pattern: '**/target/**'],    // Clean Maven artifacts
-                   [pattern: '**/*.log']         // Clean log files
-               ])
-           }
-       }
-
+			always {
+				cleanWs()
+			}
+		}
 
     }
 
