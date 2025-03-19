@@ -59,15 +59,26 @@ pipeline {
                     }
                 }
             }
-        }
-        }
+       }
+       stage('Cleanup Docker Images') {
+           steps {
+               script {
+                   // Remove the built image locally
+                   sh "docker rmi -f ${DOCKER_IMAGE_NAME}"
+
+
+               }
+           }
+       }
+
+    }
        post {
 			always {
 				cleanWs()
 			}
 		}
 
-    }
+}
 
 
 
