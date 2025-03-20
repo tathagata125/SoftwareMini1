@@ -49,7 +49,7 @@ pipeline {
        stage('Run Ansible Playbook') {
 			steps {
 				script {
-					//withEnv(["ANSIBLE_HOST_KEY_CHECKING=False"]) {
+					//withEnv(["ANSIBLE_HOST_KEY_CHECKING=False"])
 
 
                         // Run the Ansible playbook
@@ -57,7 +57,7 @@ pipeline {
                             playbook: 'deploy.yml',
                             inventory: 'inventory'
                         )
-                    }
+
                 }
             }
        }
