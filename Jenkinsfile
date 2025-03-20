@@ -2,9 +2,7 @@ pipeline {
 	agent any
 
 
-    triggers {
-        githubPush() // Triggers on GitHub push events
-    }
+
 
     environment {
 		DOCKER_IMAGE_NAME = 'calculator2'
