@@ -61,7 +61,7 @@ pipeline {
                 }
             }
        }
-       stage('Cleanup Docker Images') {
+       /*stage('Cleanup Docker Images') {
            steps {
                script {
                    // Remove the built image locally
@@ -70,7 +70,7 @@ pipeline {
 
                }
            }
-       }
+       }*/
 
     }
        post {
