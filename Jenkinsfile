@@ -29,7 +29,7 @@ pipeline {
 			steps {
 				script {
 					// Build Docker image using Dockerfile
-                    //docker.build("${DOCKER_IMAGE_NAME}", '.')
+
                       sh "docker build -t ${DOCKER_IMAGE_NAME} ."
                 }
             }
