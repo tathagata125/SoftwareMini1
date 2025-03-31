@@ -27,6 +27,5 @@
         image: tathagata125/calculator2
         state: started
         tty: true
-        interactive: true
         detach: true
         command: java -jar MT2024161-1.0-SNAPSHOT.jar
